@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.cwl.camerasample.MainActivity">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+        <SurfaceView
+            android:id="@+id/camera_surface"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textColor="@color/colorAccent"
+            android:text="摄像头预览"/>
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+        <SurfaceView
+            android:id="@+id/original_surface"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textColor="@color/colorAccent"
+            android:text="原始采集预览"/>
+    </FrameLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical">
+        <Button
+            android:id="@+id/change_camera"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="摄像头切换"/>
+        <Button
+            android:id="@+id/orientation_change"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="横竖屏切换"/>
+        <Button
+            android:id="@+id/take_capture"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="拍照"/>
+    </LinearLayout>
+</LinearLayout>
